@@ -5,7 +5,7 @@
 ## 直接可用文件
 
 - `records/catalog/books__INDEX.summary.md`：books 目录总索引
-- `records/总知识卡片.md`：稳定结论卡片
+- `knowledge/总知识卡片.md`：稳定结论卡片
 - `docs/adr/`：目录布局与阅读约定的决策记录
 - `memories.json`：机器可读共享记忆
 
@@ -28,7 +28,7 @@
 
 ## 给后续模型的建议
 
-1. 先读 `records/总知识卡片.md`
+1. 先读 `knowledge/总知识卡片.md`
 2. 再读 `records/catalog/books__INDEX.summary.md` 或对应系列索引
 3. 需要单篇细节时查 `records/summary/` 下对应摘要
 4. 新文档优先判断是否重复，重复则跳过

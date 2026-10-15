@@ -18,7 +18,7 @@ The knowledge base in `records/` holds Chinese summaries of the research reports
 
 | Need | Location |
 |------|----------|
-| Stable conclusions across the library | `records/总知识卡片.md` |
+| Stable conclusions across the library | `knowledge/总知识卡片.md` (knowledge cards live in `knowledge/`) |
 | Books index | `records/catalog/books__INDEX.summary.md` |
 | Broker series indexes | `records/catalog/broker__INDEX.summary.md`, `records/catalog/海通选股因子系列__INDEX.summary.md`, `records/catalog/开源微观系列__INDEX.summary.md` |
 | Series synthesis notes | `records/catalog/*总纲笔记*.md` (the `_快速版` files are the short versions) |
@@ -57,7 +57,17 @@ Select-String -Path records\summary\*.md, records\catalog\*.md -Pattern '<term>'
 - If no record covers the question, say so and then read the source PDF in `papers/`. Offer to write a new summary into `records/summary/`.
 - Respond to the user in Chinese. Summaries are in Chinese; keep technical terms such as triple-barrier, purged K-fold, CPCV, and HRP as written.
 
+## Document sync workflow
+
+Run this when the user asks to sync new papers. It is triggered manually.
+
+1. **Find new sources.** List PDFs under `papers/` whose modified date is in the target period. A PDF is new if no `records/summary/<pdf-name>.summary.md` exists. Match by filename, and check for `<dir>__` prefixed names on collisions.
+2. **Extract text.** Use Node `pdf-parse` (or an equivalent) into a temp folder outside the repo. Skip files with no extractable text and report them.
+3. **Write summaries.** One file per PDF in `records/summary/`, named `<pdf-name>.summary.md`. Use the template: title, `- 原文路径：`, `- 系列：`, `- 日期：`, `- 主题：` (labels from `GLOSSARY.md`), then `## 核心结论`, `## 方法要点`, `## 结果与局限`. Write in Chinese.
+4. **Update indexes.** Add the new entries to the matching series index in `records/catalog/` only. Do not edit `knowledge/` during a sync.
+5. **Report.** Give the count written, the skipped files, and the remaining backlog of PDFs without summaries.
+
 ## Known gaps
 
 - `records/` has no master `INDEX.md` yet. Use the series indexes in `records/catalog/` instead.
-- Metadata headers (source path, series, date, topics) are not yet applied to every record. Filter by filename and content.
+- Older summaries may lack the metadata header. Filter by filename and content.

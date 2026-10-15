@@ -1,0 +1,10 @@
+[project]
+name = "finance-kb-papers"
+version = "0.1.0"
+description = "Tooling for reading and extracting text from the quantitative finance literature in papers/"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pymupdf>=1.24",
+    "pdfplumber>=0.11",
+]
