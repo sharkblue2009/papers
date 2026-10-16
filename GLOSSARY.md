@@ -12,7 +12,7 @@ Domain vocabulary for the financial-engineering knowledge base in this repo.
 
 **Index**: a Markdown file that lists records and their topics. `records/books__INDEX.summary.md` is the books index.
 
-**Knowledge card**: a short file of stable conclusions for a directory, stored in `knowledge/` at the repo root, such as `knowledge/总知识卡片.md`.
+**Knowledge card**: a short file of stable conclusions for a directory, stored in `knowledge/` at the repo root, such as `knowledge/master-knowledge-card.md`.
 
 **Source series**: the broker or publisher series a document belongs to (for example 海通选股因子系列, 开源微观系列, 兴业海外). Recorded as metadata, not as the classification axis.
 

@@ -3,7 +3,7 @@
 - **生成时间**：2026-04-24
 - **扫描范围**：`/mnt/d/myspace/papers/`
 - **命中文献数**：49 篇摘要文件
-- **输出文件**：`/mnt/d/myspace/papers/broker/股价走势模式文献索引.md`
+- **输出文件**：`/mnt/d/myspace/papers/broker/price-pattern-literature-index.md`
 
 ## 检索口径
 

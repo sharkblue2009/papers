@@ -18,13 +18,17 @@ The knowledge base in `records/` holds Chinese summaries of the research reports
 
 | Need | Location |
 |------|----------|
-| Stable conclusions across the library | `knowledge/总知识卡片.md` (knowledge cards live in `knowledge/`) |
+| Stable conclusions across the library | `knowledge/master-knowledge-card.md` (knowledge cards live in `knowledge/`) |
 | Books index | `records/catalog/books__INDEX.summary.md` |
 | Broker series indexes | `records/catalog/broker__INDEX.summary.md`, `records/catalog/海通选股因子系列__INDEX.summary.md`, `records/catalog/开源微观系列__INDEX.summary.md` |
-| Series synthesis notes | `records/catalog/*总纲笔记*.md` (the `_快速版` files are the short versions) |
-| Cross-document reports | `records/catalog/alpha选股因子汇总报告.md`, `records/catalog/alpha选股因子逐因子报告.md`, `records/catalog/机器学习选股模型详细汇总报告.md` |
-| Price-pattern reading lists | `records/catalog/股价走势模式*.md` |
-| State-definition literature | `records/catalog/状态定义与状态识别文献汇总.summary.md` |
+| Series synthesis notes | `records/catalog/*master-notes*.md` |
+| Cross-document reports | `records/catalog/alpha-factor-summary-report.md`, `records/catalog/alpha-factor-per-factor-report.md`, `records/catalog/ml-stock-selection-detailed-report.md` |
+| Price-pattern reading lists | `records/catalog/price-pattern-*.md` |
+| State-definition literature | `records/catalog/regime-identification-literature-summary.summary.md` |
+| ML and LLM report index (447 reports) | `records/catalog/ml-models__INDEX.summary.md` (columns: 模型族, 具体模型, 数据与样本, 核心结论, 局限) |
+| ML and LLM knowledge card | `knowledge/ml-research-knowledge-card.md` (model-family distribution and cross-report risks) |
+| Sector rotation report index (327 reports) | `records/catalog/sector-rotation__INDEX.summary.md` (columns: 原文文件名, 研报系列, 日期, 方法类别, 具体方法, 数据与样本, 核心结论, 局限) |
+| Sector rotation knowledge card | `knowledge/sector-selection-knowledge-card.md` (method distribution, common conclusions, risks) |
 | One document's digest | `records/summary/<source-file-name>.summary.md` (about 4,500 files) |
 | Topic and term definitions | `GLOSSARY.md` (root) |
 | Architecture decisions | `docs/adr/` |
@@ -53,7 +57,7 @@ Select-String -Path records\summary\*.md, records\catalog\*.md -Pattern '<term>'
 ## Answering from records
 
 - Cite the record file you used, not the PDF, unless you read the PDF.
-- If the records conflict, prefer the series 总纲笔记 over a single-document summary, and state the conflict.
+- If the records conflict, prefer the series `broker__master-notes.md` over a single-document summary, and state the conflict.
 - If no record covers the question, say so and then read the source PDF in `papers/`. Offer to write a new summary into `records/summary/`.
 - Respond to the user in Chinese. Summaries are in Chinese; keep technical terms such as triple-barrier, purged K-fold, CPCV, and HRP as written.
 

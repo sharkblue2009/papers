@@ -1,6 +1,6 @@
 # Alpha选股因子逐因子报告
 
-> 生成路径：`/mnt/d/myspace/papers/alpha选股因子逐因子报告.md`
+> 生成路径：`/mnt/d/myspace/papers/alpha-factor-per-factor-report.md`
 >
 > 口径说明：本报告基于 `/mnt/d/myspace/papers/` 下已生成的 `*.summary.md` 汇总而成，**按具体因子**而非因子家族进行整理。不同文献的股票池、调仓频率、中性化方式、交易成本、约束条件、样本区间并不一致，因此文中的 RankIC、ICIR、年化超额、多空收益、胜率、回撤等指标**只能做主题内参考，不能直接横向排名**。
 
